@@ -358,6 +358,9 @@ function App() {
         <td style={{ border: "1px solid black" }}>
             <input
                 type="number"
+                value={insumo.cantidad}
+                onChange={(event) => handleCantidadChange(event, insumo.id_insumo)}
+                disabled={!insumo.cantidadHabilitada} // Deshabilita el campo si no está habilitado
             />
         </td>
         <td style={{ border: "1px solid black" }}>
